@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro — FixFlow</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="auth-layout">
+    <div class="auth-card">
+      <div class="auth-card-header">
+        <div class="auth-logo">F</div>
+        <h1>Criar Conta</h1>
+        <p>Preencha os dados para se cadastrar</p>
+      </div>
+
+      <form>
+        <div class="form-group">
+          <label class="form-label" for="name">Nome</label>
+          <input class="form-input" type="text" id="name" placeholder="Seu nome completo" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" type="email" id="email" placeholder="seu@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="password">Senha</label>
+          <input class="form-input" type="password" id="password" placeholder="Crie uma senha" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="password-confirm">Confirmar Senha</label>
+          <input class="form-input" type="password" id="password-confirm" placeholder="Repita a senha" required>
+        </div>
+
+        <button class="btn btn-primary btn-full btn-lg" type="submit">Cadastrar</button>
+      </form>
+
+      <p class="auth-footer-text">
+        Já tem uma conta? <a href="login.html">Entrar</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

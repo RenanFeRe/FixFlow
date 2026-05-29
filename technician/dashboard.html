@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Técnico — FixFlow</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
+
+  <div class="mobile-header">
+    <div class="mobile-header-brand">
+      <span>FixFlow</span>
+    </div>
+    <label for="sidebar-toggle" class="mobile-header-toggle">☰</label>
+  </div>
+
+  <label for="sidebar-toggle" class="sidebar-overlay"></label>
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="sidebar-brand-icon">F</div>
+      <span class="sidebar-brand-text">FixFlow</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="active">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></span> Dashboard
+      </a>
+      <a href="profile.html">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span> Configurar Perfil
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="../login.html">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></span> Sair
+      </a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="page-header">
+      <div class="page-header-row">
+        <div>
+          <h1>Dashboard Técnico</h1>
+          <p>Gerencie os chamados abertos e acompanhe suas respostas.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-card-icon green"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div class="stat-card-value">15</div>
+        <div class="stat-card-label">Respondidos</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-icon orange"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11L2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6l-3.45-6.89A2 2 0 0016.76 4H7.24a2 2 0 00-1.79 1.11z"/></svg></div>
+        <div class="stat-card-value">8</div>
+        <div class="stat-card-label">Abertos para Responder</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11L2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6l-3.45-6.89A2 2 0 0016.76 4H7.24a2 2 0 00-1.79 1.11z"/></svg> Abertos para Responder</div>
+      <div class="comment-list">
+        <div class="comment-item">
+          <div class="comment-item-header">
+            <h3 class="comment-item-title">Computador travando ao abrir o Chrome</h3>
+            <span class="badge badge-critical">Crítica</span>
+          </div>
+          <p class="comment-item-desc">Meu computador está travando sempre que tento abrir o navegador Chrome...</p>
+          <div class="comment-item-footer">
+            <span class="comment-item-date">João Silva • 28 maio 2026</span>
+            <button class="btn btn-primary btn-sm">Responder</button>
+          </div>
+        </div>
+
+        <div class="comment-item">
+          <div class="comment-item-header">
+            <h3 class="comment-item-title">Email corporativo não sincroniza</h3>
+            <span class="badge badge-medium">Média</span>
+          </div>
+          <p class="comment-item-desc">Meu email corporativo parou de sincronizar no Outlook...</p>
+          <div class="comment-item-footer">
+            <span class="comment-item-date">Maria Santos • 24 maio 2026</span>
+            <button class="btn btn-primary btn-sm">Responder</button>
+          </div>
+        </div>
+
+        <div class="comment-item">
+          <div class="comment-item-header">
+            <h3 class="comment-item-title">Monitor com pixels mortos</h3>
+            <span class="badge badge-low">Baixa</span>
+          </div>
+          <p class="comment-item-desc">Percebi alguns pixels mortos no canto superior direito do monitor...</p>
+          <div class="comment-item-footer">
+            <span class="comment-item-date">Pedro Alves • 23 maio 2026</span>
+            <button class="btn btn-primary btn-sm">Responder</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Respondidos</div>
+      <div class="comment-list">
+        <div class="comment-item">
+          <div class="comment-item-header">
+            <h3 class="comment-item-title">Teclado sem funcionar após café</h3>
+            <span class="badge badge-high">Alta</span>
+          </div>
+          <p class="comment-item-desc">Derramei um pouco de café no teclado e algumas teclas pararam de funcionar...</p>
+          <div class="comment-item-footer">
+            <span class="comment-item-date">João Silva • 27 maio 2026</span>
+            <span class="badge badge-status-resolved">Respondido em 27 maio</span>
+          </div>
+        </div>
+
+        <div class="comment-item">
+          <div class="comment-item-header">
+            <h3 class="comment-item-title">Instalar Microsoft Office</h3>
+            <span class="badge badge-low">Baixa</span>
+          </div>
+          <p class="comment-item-desc">Preciso que instalem o pacote Office no meu computador novo...</p>
+          <div class="comment-item-footer">
+            <span class="comment-item-date">João Silva • 25 maio 2026</span>
+            <span class="badge badge-status-resolved">Respondido em 25 maio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

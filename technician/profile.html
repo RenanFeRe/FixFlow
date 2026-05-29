@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurar Perfil — FixFlow</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
+
+  <div class="mobile-header">
+    <div class="mobile-header-brand">
+      <span>FixFlow</span>
+    </div>
+    <label for="sidebar-toggle" class="mobile-header-toggle">☰</label>
+  </div>
+
+  <label for="sidebar-toggle" class="sidebar-overlay"></label>
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="sidebar-brand-icon">F</div>
+      <span class="sidebar-brand-text">FixFlow</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="dashboard.html">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></span> Dashboard
+      </a>
+      <a href="profile.html" class="active">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span> Configurar Perfil
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="../login.html">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></span> Sair
+      </a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="page-header">
+      <h1>Configurar Perfil</h1>
+      <p>Gerencie suas informações pessoais e preferências.</p>
+    </div>
+
+    <div class="profile-section">
+      <div class="profile-avatar">
+        <div class="profile-avatar-image"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div class="profile-avatar-info">
+          <h3>Carlos Técnico</h3>
+          <p>carlos.tecnico@email.com</p>
+          <span class="badge badge-status-open" style="margin-top: 4px;">Técnico</span>
+        </div>
+      </div>
+
+      <div class="profile-form-card">
+        <form>
+          <div class="form-group">
+            <label class="form-label" for="name">Nome completo</label>
+            <input class="form-input" type="text" id="name" value="Carlos Técnico">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" type="email" id="email" value="carlos.tecnico@email.com">
+          </div>
+
+          <div style="border-top: 1px solid var(--border); margin: 24px 0;"></div>
+
+          <div class="form-group">
+            <label class="form-label" for="current-password">Senha atual</label>
+            <input class="form-input" type="password" id="current-password" placeholder="Digite sua senha atual">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="new-password">Nova senha</label>
+              <input class="form-input" type="password" id="new-password" placeholder="Nova senha">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="confirm-password">Confirmar senha</label>
+              <input class="form-input" type="password" id="confirm-password" placeholder="Confirme a nova senha">
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; margin-top: 24px;">
+            <button class="btn btn-primary" type="submit">Salvar alterações</button>
+            <button class="btn btn-secondary" type="reset">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

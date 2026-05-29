@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minhas Avaliações — FixFlow</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
+
+  <div class="mobile-header">
+    <div class="mobile-header-brand">
+      <span>FixFlow</span>
+    </div>
+    <label for="sidebar-toggle" class="mobile-header-toggle">☰</label>
+  </div>
+
+  <label for="sidebar-toggle" class="sidebar-overlay"></label>
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="sidebar-brand-icon">F</div>
+      <span class="sidebar-brand-text">FixFlow</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="dashboard.html">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span> Dashboard
+      </a>
+      <a href="reviews.html" class="active">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> Minhas Avaliações
+      </a>
+      <a href="profile.html">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></span> Configurar Perfil
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="../login.html">
+        <span class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></span> Sair
+      </a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="page-header">
+      <h1>Minhas Avaliações</h1>
+      <p>Avalie o atendimento dos técnicos nos chamados resolvidos.</p>
+    </div>
+
+    <div class="review-item">
+      <div class="review-item-header">
+        <div>
+          <h3 class="review-item-title">Teclado sem funcionar após café</h3>
+          <div class="review-item-meta">Atendido por: <strong>Carlos Técnico</strong> • 27 maio 2026</div>
+        </div>
+        <span class="badge badge-status-resolved">Resolvido</span>
+      </div>
+      <p class="comment-item-desc" style="color: var(--text-secondary); font-size: 14px;">
+        O técnico sugeriu secar o teclado com ar comprimido e testar as teclas. Resolveu parcialmente.
+      </p>
+      <div class="review-item-actions">
+        <span style="font-size: 14px; font-weight: 600;">Sua avaliação:</span>
+        <div class="star-rating">
+          <input type="radio" name="rating-1" id="star5-1" value="5">
+          <label for="star5-1"></label>
+          <input type="radio" name="rating-1" id="star4-1" value="4">
+          <label for="star4-1"></label>
+          <input type="radio" name="rating-1" id="star3-1" value="3">
+          <label for="star3-1"></label>
+          <input type="radio" name="rating-1" id="star2-1" value="2">
+          <label for="star2-1"></label>
+          <input type="radio" name="rating-1" id="star1-1" value="1">
+          <label for="star1-1"></label>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 20px;" class="review-item">
+      <div class="review-item-header">
+        <div>
+          <h3 class="review-item-title">Instalar Microsoft Office</h3>
+          <div class="review-item-meta">Atendido por: <strong>Ana Suporte</strong> • 25 maio 2026</div>
+        </div>
+        <span class="badge badge-status-resolved">Resolvido</span>
+      </div>
+      <p class="comment-item-desc" style="color: var(--text-secondary); font-size: 14px;">
+        Instalação realizada remotamente. O técnico foi muito ágil e educado.
+      </p>
+      <div class="review-item-actions">
+        <span style="font-size: 14px; font-weight: 600;">Sua avaliação:</span>
+        <div class="star-rating">
+          <input type="radio" name="rating-2" id="star5-2" value="5">
+          <label for="star5-2"></label>
+          <input type="radio" name="rating-2" id="star4-2" value="4">
+          <label for="star4-2"></label>
+          <input type="radio" name="rating-2" id="star3-2" value="3">
+          <label for="star3-2"></label>
+          <input type="radio" name="rating-2" id="star2-2" value="2">
+          <label for="star2-2"></label>
+          <input type="radio" name="rating-2" id="star1-2" value="1">
+          <label for="star1-2"></label>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
