@@ -1,7 +1,8 @@
 const cadastrar_btn = document.getElementById("cadastrar-btn");
 
 //pegar as informações do usuário
-cadastrar_btn.addEventListener("click", () => {
+cadastrar_btn.addEventListener("click", (e) => {
+  e.preventDefault();
 
   const nome = document.getElementById("name").value;
   const email = document.getElementById("email").value;
@@ -9,11 +10,10 @@ cadastrar_btn.addEventListener("click", () => {
   const senha_Confi = document.getElementById("password-confirm").value;
   const role = document.querySelector('input[name="role"]:checked').value;
 
-  if (senha === senha_Confi) {
+  if (senha != senha_Confi) {
     
-    storage(nome, email, senha, senha_Confi, role);
-    
-  } else if (nome >= 15) {
+    window.alert("senhas não são iguais");
+  } else if (nome.length >= 15) {
 
     window.alert("nome muito grande");
   }
@@ -22,7 +22,7 @@ cadastrar_btn.addEventListener("click", () => {
     window.alert("email inválido");
   } else {
     
-    window.alert("senhas não são iguais");
+    storage(nome, email, senha, senha_Confi, role);
   }
 });
 
@@ -37,17 +37,14 @@ function storage (nome, email, senha, senha_Confi, role) {
     "role": role
   };
 
-  try {
     var userText = JSON.stringify(userInfo);
     localStorage.setItem("userInfo", userText);
 
     if (role === "tecnico") {
-      window.location.href = "file:///mnt/HDD-Parte1/Documentos/Projetos/FixFlow/technician/dashboard.html";
+      window.location.href = "technician/dashboard.html";
+      
     } else {
-      window.location.href = "file:///mnt/HDD-Parte1/Documentos/Projetos/FixFlow/client/dashboard.html";
+      window.location.href = "client/dashboard.html";
     }
     
-  } catch (erro) {
-    console.log("erro", erro);
-  }
 }
