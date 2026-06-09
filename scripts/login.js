@@ -1,5 +1,6 @@
 const login_btn = document.getElementById("login-btn");
 
+// Vai ver se existe uma conta e vai redirecionar para a dashboard correspondente
 login_btn.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -8,16 +9,25 @@ login_btn.addEventListener("click", (e) => {
 
   const userInfo = localStorage.getItem("userInfo");
   const parsedInfo = JSON.parse(userInfo);
-  
-  if (parsedInfo.email === email && parsedInfo.senha === password) {
 
-    if (parsedInfo.role === "tecnico") {
-      window.location.href = "technician/dashboard.html";
-    } else {
-      window.location.href = "client/dashboard.html";
-    }
-    
+  if (parsedInfo === null) {
+    alert("Está faltando informações");
   } else {
-    alert("Email ou senha incorretos.");
+    
+    if (parsedInfo.email === email && parsedInfo.senha === password) {
+      if (parsedInfo.role === "tecnico") {
+      
+        window.location.href = "technician/dashboard.html";
+
+      } else {
+      
+        window.location.href = "client/dashboard.html";
+
+      }
+    } else {
+      alert("Email ou senha incorretos.");        
+    }
   }
-  });
+});
+
+
