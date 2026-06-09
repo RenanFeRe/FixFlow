@@ -1,9 +1,15 @@
 const login_btn = document.getElementById("login-btn");
 
-// Vai ver se existe uma conta e vai redirecionar para a dashboard correspondente
+// botão login
 login_btn.addEventListener("click", (e) => {
-  e.preventDefault();
+  login(e);
+});
 
+
+// função vai ver se existe uma conta e vai redirecionar para a dashboard correspondente
+function login(e) {
+  e.preventDefault();
+  
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
@@ -28,6 +34,5 @@ login_btn.addEventListener("click", (e) => {
       alert("Email ou senha incorretos.");        
     }
   }
-});
-
+}
 

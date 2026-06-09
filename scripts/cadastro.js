@@ -1,7 +1,12 @@
 const cadastrar_btn = document.getElementById("cadastrar-btn");
 
-//pegar as informações do usuário
+// botão cadastrar
 cadastrar_btn.addEventListener("click", (e) => {
+  cadastro(e);
+});
+
+// função cadastrar novo usuário e pegar as informações do usuário
+function cadastro(e) {
   e.preventDefault();
 
   const nome = document.getElementById("name").value;
@@ -24,7 +29,7 @@ cadastrar_btn.addEventListener("click", (e) => {
     
     storage(nome, email, senha, senha_Confi, role);
   }
-});
+}
 
 // função para guardar informações do usuário no localStorage
 function storage (nome, email, senha, senha_Confi, role) {
