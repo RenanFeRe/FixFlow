@@ -16,17 +16,17 @@ function cadastro(e) {
   const role = document.querySelector('input[name="role"]:checked').value;
 
   if (senha != senha_Confi) {
-    
+
     window.alert("senhas não são iguais");
   } else if (nome.length >= 15) {
 
     window.alert("nome muito grande");
   }
   else if (email.length <= 6) {
-    
+
     window.alert("email inválido");
   } else {
-    
+
     storage(nome, email, senha, senha_Confi, role);
   }
 }
@@ -47,9 +47,8 @@ function storage (nome, email, senha, senha_Confi, role) {
 
     if (role === "tecnico") {
       window.location.href = "technician/dashboard.html";
-      
+
     } else {
       window.location.href = "client/dashboard.html";
     }
-    
 }

@@ -11,10 +11,8 @@ salvar_alteracoes.addEventListener("click", (e) => {
   if (nome === "" && email === "") {
     alert("Campos vázios");
   } else {
-    nomeEmailAtt(e, nome, email);
-    senhaAtt(e);
+    attInfo(e, nome, email)
   }
-  mostrarInfo();
 });
 
 function mostrarInfo() {
@@ -26,40 +24,33 @@ function mostrarInfo() {
 }
 mostrarInfo();
 
-function nomeEmailAtt(e, nome, email) {
+function attInfo(e, nome, email) {
   e.preventDefault();
 
-  if (nome === parsedInfo.nome && email === parsedInfo.email) {
-    alert("Não há alterações a serem feitas");
-  } else {
-    parsedInfo.nome = nome;
-    parsedInfo.email = email;
-    localStorage.setItem("userInfo", JSON.stringify(parsedInfo));
-    alert("Informações atualizadas com sucesso");
-  }
-}
-
-function senhaAtt(e) {
-  e.preventDefault();
-
-  const senhaAtual = parsedInfo.senha;
   const senha = document.getElementById("current-password").value;
-  let senhaNova = document.getElementById("new-password").value;
-  let senhaConfirm = document.getElementById("confirm-password").value;
+  const senhaNova = document.getElementById("new-password").value;
+  const senhaConfirm = document.getElementById("confirm-password").value;
 
-  if (senhaNova !== senhaAtual) {
-    if (senhaAtual === senha) {
-      if (senhaNova === senhaConfirm) {
-        alert("Senha atualizada com sucesso");
-        parsedInfo.senha = senhaNova;
-        localStorage.setItem("userInfo", JSON.stringify(parsedInfo));
-      } else {
-        alert("As senhas não coincidem");
-      }
+  if (parsedInfo.senha === senha) {
+    if (nome === parsedInfo.nome && email === parsedInfo.email) {
+      alert("Não há alterações a serem feitas");
     } else {
-      alert("Senha atual incorreta");
+      parsedInfo.nome = nome;
+      parsedInfo.email = email;
+      mostrarInfo();
+      alert("Alterações feitas com sucesso!");
     }
-  } else {
-    alert("A senha atual é igual a senha escrita");
+
+    if (senhaNova === senhaConfirm) {
+      parsedInfo.senha = senhaNova;
+      alert("Senha Alterada");
+    } else {
+      alert("Algo deu errado");
+    }
+
+    localStorage.setItem("userInfo", JSON.stringify(parsedInfo));
+  } else if (senha === "") {
+    alert("Precisa da senha para aplicar as mudanças");
   }
+
 }
