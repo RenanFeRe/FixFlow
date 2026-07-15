@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "titulo": "Computador não liga mais",
+    "resumo": "caiu água",
+    "prioridade": "high",
+    "nome": "Renan",
+    "clienteEmail": "renna@proton.me",
+    "data": "2026-07-15",
+    "status": "aberto"
+  },
+  {
+    "id": 2,
+    "titulo": "fio desencapado",
+    "resumo": "tem um fio desencapado perto da minha mesa, por favor retire",
+    "prioridade": "medium",
+    "nome": "Pedro",
+    "clienteEmail": "pedro.gmail.com",
+    "data": "2026-07-15",
+    "status": "aberto"
+  }
+]

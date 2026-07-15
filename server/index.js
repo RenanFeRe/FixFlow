@@ -15,16 +15,16 @@ app.use((_req, res, next) => {
 });
 
 app.post("/api/chamados", (req, res) => {
-  const { titulo, resumo, prioridade, nome } = req.body;
+  const { titulo, resumo, prioridade, nome, clienteEmail } = req.body;
 
-  if (!titulo || !resumo || !prioridade || !nome) {
-    return res.status(400).json({ erro: "Campos obrigatórios: titulo, resumo, prioridade, nome" });
+  if (!titulo || !resumo || !prioridade || !nome || !clienteEmail) {
+    return res.status(400).json({ erro: "Campos obrigatórios: titulo, resumo, prioridade, nome, clienteEmail" });
   }
   if (!["critical", "high", "medium", "low"].includes(prioridade)) {
     return res.status(400).json({ erro: "prioridade deve ser: critical, high, medium ou low" });
   }
 
-  const chamado = db.criar({ titulo, resumo, prioridade, nome });
+  const chamado = db.criar({ titulo, resumo, prioridade, nome, clienteEmail });
   res.status(201).json(chamado);
 });
 

@@ -45,6 +45,7 @@ export function criar(dados) {
     resumo: dados.resumo,
     prioridade: dados.prioridade,
     nome: dados.nome,
+    clienteEmail: dados.clienteEmail,
     data: new Date().toISOString().slice(0, 10),
     status: "aberto"
   };
